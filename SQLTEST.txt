@@ -62,3 +62,9 @@ select CustomerID,Region,Country from Customers
 where Country like 'France' or Country like 'Canada'
 
 -------------------------------10 
+
+select OD.*,O.OrderDate,O.EmployeeID,O.CustomerID from [Order Details] OD,Orders O
+where OD.OrderID = 10248 and O.CustomerID like 'VINET'
+order by UnitPrice,O.EmployeeID
+
+----------------------------- another example to exe 9
